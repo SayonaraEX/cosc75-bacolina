@@ -271,22 +271,22 @@ h2 {
 
       /* Footer styling */
       footer {
-        color: #fff;
+        color: #E9E8E8;
         padding: 2rem;
         text-align: center;
       }
   
       .contact-section {
-        max-width: 600px;
+        max-width: 1000px;
         margin: 0 auto;
       }
   
       .contact-section h2 {
-        font-size: 24px;
         margin-bottom: 1rem;
       }
   
       .contact-section form {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
       }
@@ -316,6 +316,22 @@ h2 {
         background-color: #913175;
         color: #E9E8E8; 
       }
+
+      footer p {
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.6;
+        margin-top: 1rem;
+      }
+      
+      footer p.contact-info {
+        font-size: 16px; 
+        font-weight: bold;
+        margin-top: 1.5rem;
+        color: #CD5888;
+      }
+      
+      
 
 @media (max-width: 768px) {
     h2 {
