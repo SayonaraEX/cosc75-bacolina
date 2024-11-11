@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio COS75</title>
     <link rel="stylesheet" href="mycsss.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "JG95twLTVTAz-JU36",
+  });
+})();
+</script>
+<script src="myjscript.js"></script>
 </head>
 <body>
     <header>
@@ -12,13 +26,14 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#exp">Experiences</a></li>
+                    <li><a href="#proj">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section id="home" class="class1">
+    <section id="about" class="class1">
         <div class="content">
             <div class="imagerenlly">
                 <img src="rrenlly.jpg" height="450" width="450">
@@ -28,12 +43,12 @@
             <p class="description">I am currently a third-year Computer Science student, working to build a strong foundation in programming and technology. I have learned to work with languages such as Java, HTML, CSS, JavaScript, and Python, and I am always looking for opportunities to grow and improve. I'm into online gaming, watching series/anime, listening to music, and being alone. </p>
 
             <div class="buttons">
-                <a href="https://drive.google.com/file/d/18idPxr1ChF0-OQwKHy-LiBKaKiz3aimf/view?usp=drive_link" class="btn hire-me">Download CV</a>
+                <a href="https://drive.google.com/file/d/18idPxr1ChF0-OQwKHy-LiBKaKiz3aimf/view?usp=drive_link" class="btn dload">Download CV</a>
                 <a href="#" class="btn talk">Let's Talk</a>
             </div>
             <div class="socials">
-                <a href="m.me/The.Water.Hashira" class="social-icon">
-                    <img src="mess.png">
+                <a href="m.me/The.Water.Hashira" class="social-icon" >
+                    <img src="mess.png ">
                 </a>
                 <a href="https://www.facebook.com/The.Water.Hashira/" class="social-icon">
                     <img src="facebok.png">
@@ -52,7 +67,7 @@
 <br>
 <br>
 <br>
-<div class="myexperience">
+<div id="exp" class="myexperience">
 <h2>Experiences</h2>
 <br>
 <br>
@@ -115,8 +130,44 @@
     </div>
 </div>
 
+<div class="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <a href="https://github.com/SayonaraEX/Lost-And-Found" target="_blank" class="project-card">
+        <img src="lostfound.png" alt="Project 1">
+        <h3>Lost&Found System</h3>
+      </a>
+      <a href="https://github.com/SayonaraEX/Grades-Evaluating-System" target="_blank" class="project-card">
+        <img src="GradeEval.jpeg" alt="Project 2">
+        <h3>Grade Evaluatiomn System</h3>
+      </a>
+      <a href="https://github.com/SayonaraEX/TOTON-WATER-REFILLING-STATION" target="_blank" class="project-card">
+        <img src="tonton.jpeg" alt="Project 3">
+        <h3>Water Station System</h3>
+      </a>
+      <a href="https://docs.google.com/document/d/12dqSppDnP6l2dWxSRGlOhLfe6Z0Nxg3Z/edit?usp=drive_link&ouid=109363472370306536308&rtpof=true&sd=true" target="_blank" class="project-card">
+        <img src="sari.jpg" alt="Project 4">
+        <h3>Sari-Sari Store System</h3>
+      </a>
+    </div>
+  </div>
 
-    
+  <footer>
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="status-message"></p>
+    </div>
+  </footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="myjscript.js"></script>
+  
 
 </body>
 </html>
