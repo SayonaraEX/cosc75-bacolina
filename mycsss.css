@@ -8,34 +8,42 @@ body {
     font-family: Arial, sans-serif;
     color: #161616;
     background-color: #161616;
+    line-height: 1.6;
 }
 
 header {
     width: 100%;
     background-color: #913175;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
+/* Container styling */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     justify-content: center;
     align-items: center;
     gap: 30px;
+    overflow: auto; /* Allow horizontal scroll on smaller screens */
 }
 
+/* Navigation styling */
 nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     gap: 30px;
+    overflow: auto; /* Allow horizontal scroll for the nav items if needed */
 }
 
 nav ul li {
     list-style: none;
+    flex-shrink: 0; /* Prevent items from shrinking */
 }
 
 nav ul li a {
@@ -53,7 +61,6 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-
 .class1 {
     display: flex;
     flex-direction: column;
@@ -66,7 +73,8 @@ nav ul li a:hover {
 .imagerenlly {
     width: 90vw;
     max-width: 450px;
-    margin-left: 165px;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     background-color: #000000;
     border-radius: 50%;
@@ -76,7 +84,7 @@ nav ul li a:hover {
 }
 
 .content {
-    margin-top: -80px;
+    margin-top: 100px;
     max-width: 800px;
     text-align: center;
     padding: 20px;
@@ -146,12 +154,11 @@ h2 {
 }
 
 .social-icon img {
-    width: 30px; 
+    width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
-
 
 .myexperience {
     text-align: center;
@@ -211,26 +218,26 @@ h2 {
     max-width: 1500px;
     text-align: center;
     padding: 2rem;
-    border: 2px solid #913175; /* Transparent border effect */
+    border: 2px solid #913175;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 350px;
     margin-bottom: 350px;
-  }
+}
 
-  .projects h2 {
+.projects h2 {
     color: #E9E8E8;
     position: relative;
     top: -100px;
-  }
+}
 
-  .project-cards {
+.project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-  }
+}
 
-  .project-card {
+.project-card {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
@@ -238,20 +245,20 @@ h2 {
     cursor: pointer;
     border: 1px solid #913175;
     box-shadow: 0px 4px 8px #913174;
-  }
+}
 
-  .project-card:hover {
+.project-card:hover {
     transform: scale(1.05);
-  }
+}
 
-  .project-card img {
+.project-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .project-card h3 {
+.project-card h3 {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -260,86 +267,92 @@ h2 {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
-  }
+}
 
-  .project-card a {
+.project-card a {
     text-decoration: none;
     color: inherit;
     display: block;
     height: 100%;
-  }
+}
 
-      /* Footer styling */
-      footer {
-        color: #E9E8E8;
-        padding: 2rem;
-        text-align: center;
-      }
-  
-      .contact-section {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-  
-      .contact-section h2 {
-        margin-bottom: 1rem;
-      }
-  
-      .contact-section form {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .contact-section input, 
-      .contact-section textarea {
-        width: 100%;
-        padding: 0.75rem;
-        margin-bottom: 1rem;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-  
-      .contact-section button {
-        padding: 0.75rem;
-        background-color: transparent;
-        color: #CD5888;
-        border: 2px solid #CD5888;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-  
-      .contact-section button:hover {
-        background-color: #913175;
-        color: #E9E8E8; 
-      }
+footer {
+    color: #E9E8E8;
+    padding: 2rem;
+    text-align: center;
+}
 
-      footer p {
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.6;
-        margin-top: 1rem;
-      }
-      
-      footer p.contact-info {
-        font-size: 16px; 
-        font-weight: bold;
-        margin-top: 1.5rem;
-        color: #CD5888;
-      }
-      
-      
+.contact-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-@media (max-width: 768px) {
+.contact-section h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-section form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-section button {
+    padding: 0.75rem;
+    background-color: transparent;
+    color: #CD5888;
+    border: 2px solid #CD5888;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #913175;
+    color: #E9E8E8;
+}
+
+footer p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+footer p.contact-info {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: #CD5888;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        padding: 10px;
+    }
+
+    .imagerenlly {
+        width: 75vw;
+    }
+
     h2 {
         font-size: 2rem;
     }
 
     .expcontainer {
-        gap: 10px;
+        gap: 15px;
     }
 
     .buttons {
@@ -348,14 +361,17 @@ h2 {
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 300px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .imagerenlly {
         width: 80vw;
-        margin-right: 0;
     }
 
     h2 {
@@ -370,5 +386,39 @@ h2 {
         text-align: center;
     }
 
+    .projects h2 {
+        font-size: 1.5rem;
+    }
+}
 
+@media (max-width: 480px) {
+    .imagerenlly {
+        width: 90vw;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-section input, 
+    .contact-section textarea {
+        font-size: 14px;
+    }
+
+    .contact-section button {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
