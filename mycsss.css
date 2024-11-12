@@ -145,14 +145,14 @@ body {
 
 .imagerenlly {
     width: 90vw;
-    max-width: 450px;
+    max-width: 290px;
     height: auto;
-    margin: 0 auto 30px; /* Centering with shorthand: top, horizontal, bottom */
+    margin: 0 auto 30px;
     background-color: #000000;
     border-radius: 50%;
     clip-path: circle();
     position: relative;
-    display: block; /* Ensures proper centering */
+    display: block;
 }
 
 .content {
@@ -163,21 +163,33 @@ body {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #E9E8E8;
 }
 
 .role {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #CD5888;
     margin-bottom: 20px;
 }
 
 .description {
     color: #E9E8E8;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .role {
+        font-size: 1.2rem;
+    }
+    .description {
+        font-size: 1.3rem;
+    }
 }
 
 .buttons {
