@@ -13,7 +13,7 @@ body {
 
 .navbar {
     background-color: #913175;
-    padding: 18px 36px;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px #913175;
     position: fixed;
     top: 0;
@@ -86,22 +86,24 @@ body {
     .navbar-links {
         flex-direction: column;
         position: absolute;
-        background-color: #913175;
+        background-color: rgba(145, 49, 117, 0.9); /* Slightly transparent */
         top: 50px;
-        right: 0;
-        width: 30%;
-        padding: 60px;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 80%;
+        padding: 60px 20px;
         display: none;
         text-align: center;
         gap: 20px;
         z-index: 999;
-        transition: transform 0.3s ease;
-        transform: translateY(-100%);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        border-radius: 8px; /* Optional rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
     }
 
     .navbar-links.active {
         display: flex;
-        transform: translateY(0);
+        transform: translate(-50%, 0);
     }
 
     .navbar-links li a {
@@ -133,6 +135,7 @@ body {
         display: flex;
     }
 }
+
 
 .class1 {
     display: flex;
