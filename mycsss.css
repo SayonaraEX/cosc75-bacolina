@@ -194,7 +194,7 @@ h2 {
 
 @media (max-width: 600px) {
     .content {
-        margin-top: -80px;
+        margin-top: -50px;
         max-width: 600px;
         padding: 10px;
     }
