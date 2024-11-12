@@ -43,20 +43,17 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect */
 .navbar-links li a:hover {
     background-color: #CD5888;
     color: #161616;
 }
 
-/* Active state styling */
 .navbar-links li a.active {
     color: #161616;
     background-color: #CD5888;
     font-weight: bold;
 }
 
-/* Mobile Navigation */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -71,7 +68,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Burger icon animation */
 .menu-icon.active .bar:nth-child(1) {
     transform: rotate(45deg);
     transform-origin: top left;
@@ -150,14 +146,13 @@ body {
 .imagerenlly {
     width: 90vw;
     max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
     height: auto;
+    margin: 0 auto 30px; /* Centering with shorthand: top, horizontal, bottom */
     background-color: #000000;
     border-radius: 50%;
     clip-path: circle();
     position: relative;
-    margin-bottom: 30px;
+    display: block; /* Ensures proper centering */
 }
 
 .content {

@@ -24,11 +24,15 @@
     event.preventDefault();
     sendMail();
   });
-  
 
-  const navbarToggle = document.querySelector('.navbar-toggle');
-  const navbarLinks = document.querySelector('.navbar-links');
-  
-  navbarToggle.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active'); // Toggles the 'active' class to show/hide navbar links
-  });
+  function toggleMenu() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    if (menuIcon && navbarLinks) {
+        menuIcon.classList.toggle('active');
+        navbarLinks.classList.toggle('active');
+    } else {
+        console.error("Menu icon or navbar links not found.");
+    }
+}
