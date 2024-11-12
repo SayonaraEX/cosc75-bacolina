@@ -194,7 +194,7 @@ h2 {
 
 @media (max-width: 600px) {
     .content {
-        margin-top: 20px;
+        margin-top: 5px;
         max-width: 600px;
         padding: 10px;
     }
@@ -303,7 +303,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 10px 20px #913175;
     width: 100%;
-    max-width: 250px; /* Default width for larger screens */
+    max-width: 250px;
     text-align: left;
     transition: transform 0.2s ease;
 }
@@ -340,31 +340,31 @@ h2 {
     }
 
     .expcontainer {
-        display: block; /* Stack the cards vertically */
+        display: block; 
         gap: 20px;
     }
 
     .card {
-        max-width: 180px; /* Adjust max-width for mobile */
-        margin: 0 auto; /* Center the cards */
-        padding: 10px; /* Adjust padding for smaller cards */
+        max-width: 180px;
+        margin: 0 auto; 
+        padding: 10px;
     }
 
     .card img {
-        height: 140px; /* Adjust image height for mobile */
+        height: 140px; 
         object-fit: cover;
     }
 
     .card h3 {
-        font-size: 1rem; /* Adjust title font size for mobile */
+        font-size: 1rem; 
     }
 
     .category, .info {
-        font-size: 0.75rem; /* Adjust font size for mobile readability */
+        font-size: 0.75rem; 
     }
 }
 
-/* Adjustments for medium to large tablets and desktops */
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .myexperience {
         padding: 20px;
@@ -378,7 +378,7 @@ h2 {
     }
 
     .card {
-        max-width: 220px; /* Slightly smaller cards for tablets */
+        max-width: 220px;
     }
 }
 
