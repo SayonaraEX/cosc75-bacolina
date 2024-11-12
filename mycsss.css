@@ -147,26 +147,35 @@ body {
 }
 
 .imagerenlly {
-    width: 90vw;
-    max-width: 290px;
-    height: auto;
-    margin: 0 auto 30px;
-    background-color: #000000;
+    max-width: 500px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto 10px;
+    background-color: #161616;
     border-radius: 50%;
     clip-path: circle();
-    position: relative;
     display: block;
 }
 
+@media (max-width: 768px) {
+    .imagerenlly {
+        max-width: 350px;
+        width: 350px;
+        height: 350px;
+
+    }
+}
+
+
 .content {
-    margin-top: 20px;
-    max-width: 800px;
+    margin-top: -20px;
+    max-width: 200vw; 
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem; 
     color: #E9E8E8;
 }
 
@@ -178,20 +187,48 @@ h2 {
 
 .description {
     color: #E9E8E8;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-@media (min-width: 600px) {
-    h2 {
-        font-size: 2rem;
+@media (max-width: 600px) {
+    .content {
+        margin-top: 20px;
+        max-width: 600px;
+        padding: 10px;
     }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+    
     .role {
         font-size: 1.2rem;
     }
+    
     .description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content {
+        max-width: 800px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .role {
         font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        line-height: 1.8;
     }
 }
 
@@ -266,7 +303,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 10px 20px #913175;
     width: 100%;
-    max-width: 250px;
+    max-width: 250px; /* Default width for larger screens */
     text-align: left;
     transition: transform 0.2s ease;
 }
@@ -296,9 +333,55 @@ h2 {
     color: #913175;
 }
 
-.knowledge, .price {
-    color: #CD5888;
+/* Mobile and smaller devices */
+@media (max-width: 767px) {
+    .myexperience {
+        padding: 10px;
+    }
+
+    .expcontainer {
+        display: block; /* Stack the cards vertically */
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 180px; /* Adjust max-width for mobile */
+        margin: 0 auto; /* Center the cards */
+        padding: 10px; /* Adjust padding for smaller cards */
+    }
+
+    .card img {
+        height: 140px; /* Adjust image height for mobile */
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-size: 1rem; /* Adjust title font size for mobile */
+    }
+
+    .category, .info {
+        font-size: 0.75rem; /* Adjust font size for mobile readability */
+    }
 }
+
+/* Adjustments for medium to large tablets and desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .myexperience {
+        padding: 20px;
+    }
+
+    .expcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 220px; /* Slightly smaller cards for tablets */
+    }
+}
+
 
 .projects {
     width: 100%;
